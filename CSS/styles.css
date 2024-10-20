@@ -1,0 +1,8 @@
+:root{
+    --backgroundColor: #C16EF3;
+    --backgroundColorDark: darken($backgroundColor, 20%);
+    --backgroundColorLight: lighten($backgroundColor, 20%);
+}
+body{
+    background-color: var(--backgroundColor);
+}

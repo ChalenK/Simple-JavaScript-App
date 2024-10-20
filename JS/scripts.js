@@ -1,15 +1,21 @@
-
-
 let pokedex = [
-  "Nidoran" + '  ' + 9 + '  ' + "Poison",
-  "Nidorino" + '  ' + 19.5 + '  ' + "Poison",
-  "Nidoking" + '  ' + 62 + '  ' + "Poison/Ground"
+  { name: "Nidoran", height: 0.5, type: "Poison" },
+  { name: "Nidorino", height: 0.9, type: "Poison" },
+  { name: "Nidoking", height: 1.4, type: "Poison/Ground" }
 ];
-   for (let i = 0; i < pokedex.length; i++){
-     console.log(pokedex)
-     document.write(pokedex)
-   }
-   let i = weight;
-   if (w < 10){
-  console.log("WOW! Thats Huge!")
+
+
+for (let i = 0; i < pokedex.length; i++) {
+  // Access each Pokémon's details
+  let pokemon = pokedex[i];
+  let output = pokemon.name + " (height: " + pokemon.height + ") - " + pokemon.type;
+
+  // Check if the height is greater than a certain value
+  if (pokemon.height > 1) {
+    output += " - Its Huge!";
+  }
+
+  // Output the result to console and document
+  console.log(output);
+  document.write(output + "<br>"); // Adds line breaks in document
 }

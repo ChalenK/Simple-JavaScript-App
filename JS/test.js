@@ -23,4 +23,4 @@ console.log(pokedex[w].weight)
 document.write(pokedex[i].name + '  ' + pokedex[w].weight + '  ' + "<br/>")
 }
 }
-/* Array repeats names and I have no Idea why*/
+/* This Code was the last attempt before I was able to find a correct way to do my loops*/
