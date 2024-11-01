@@ -24,12 +24,39 @@ let pokeDex = (function () {
   function getAll() {
     return pokemonList;
   }
-
+  
+  function addListItem(pokemon) {
+ let pokemonList = document.querySelector('.pokemon-list');
+ let listItem = document.createElement('li');
+ let button = document.createElement('button');
+ button.innerText = pokemon.name;
+ button.classList.add('button')
+ listItem.appendChild(button);
+ pokemonList.appendChild(listItem)
+ button.addEventListener('click', showDetails)
+  }
+  function showDetails(pokemon) {
+    console.log(event.target)
+  }
+  
+  
+  
   return {
     add: add,
-    getAll: getAll
-  };
+    getAll: getAll,
+    addListItem: addListItem
+  }
 })();
+
 console.log(pokeDex.getAll())
-pokeDex.add({ name: 'Rhydon'});
+pokeDex.add(
+  { 
+  name: 'Rhydon',
+  height: 1.9,
+  type: "Rock/Ground"
+  });
 console.log(pokeDex.getAll());
+
+pokeDex.getAll().forEach(function (pokemon) {
+ pokeDex.addListItem(pokemon);
+})

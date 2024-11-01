@@ -1,21 +1,35 @@
-let pokedex = [
-  { name: "Nidoran", height: 0.5, type: "Poison" },
-  { name: "Nidorino", height: 0.9, type: "Poison" },
-  { name: "Nidoking", height: 1.4, type: "Poison/Ground" }
-];
+let pokeDex = (function () {
+  let pokemonList = [
+   {
+     name: "Nidoran",
+     height: 0.5,
+     type: "Poison"
+   },
+   {
+    name: "Nidorino",
+    height: 0.9,
+    type: "Poison"
+   },
+   {
+     name: "Nidoking",
+     height: 1.4,
+     type: "Poison/Ground"
+   }
+  ];
 
-
-for (let i = 0; i < pokedex.length; i++) {
-  // Access each Pokémon's details
-  let pokemon = pokedex[i];
-  let output = pokemon.name + " (height: " + pokemon.height + ") - " + pokemon.type;
-
-  // Check if the height is greater than a certain value
-  if (pokemon.height > 1) {
-    output += " - Its Huge!";
+  function add(pokemon) {
+    pokemonList.push(pokemon);
   }
 
-  // Output the result to console and document
-  console.log(output);
-  document.write(output + "<br>"); // Adds line breaks in document
-}
+  function getAll() {
+    return pokemonList;
+  }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
+})();
+console.log(pokeDex.getAll())
+pokeDex.add({ name: 'Rhydon'});
+console.log(pokeDex.getAll());

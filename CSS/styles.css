@@ -6,3 +6,6 @@
 body{
     background-color: var(--backgroundColor);
 }
+.button{
+    background-color: lightblue;
+}
