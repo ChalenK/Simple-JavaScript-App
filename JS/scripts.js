@@ -21,6 +21,7 @@ let pokeDex = (function () {
  button.innerText = pokemon.name;
  button.classList.add("button-custom")
  listItem.appendChild(button);
+ .classList.add(list-group-item);
  pokemonListElement.appendChild(listItem)
  button.addEventListener("click", function(){
    showDetails(pokemon)
