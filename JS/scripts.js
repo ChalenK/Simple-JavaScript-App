@@ -21,7 +21,7 @@ let pokeDex = (function () {
  button.innerText = pokemon.name;
  button.classList.add("button-custom")
  listItem.appendChild(button);
- .classList.add(list-group-item);
+ pokemonListElement.classList.add("list-group-item");
  pokemonListElement.appendChild(listItem)
  button.addEventListener("click", function(){
    showDetails(pokemon)
@@ -32,7 +32,7 @@ let pokeDex = (function () {
     let modalContainer = document.querySelector("#modal-container");
     modalContainer.innerHTML = "";
     
-    let modal = document.createElement("div");
+   let modal = document.createElement("div");
     modal.classList.add("modal");
     
     let closeButtonElement = document.createElement("button");
@@ -55,8 +55,9 @@ let pokeDex = (function () {
     modal.appendChild(contentElement);
     modal.appendChild(imageElement);
     modalContainer.appendChild(modal);
-    
     modalContainer.classList.add("is-visible");
+    modal.style.display = "block";
+    modal.style.backgroundColor = "pink";
   }
  
     function hideModal() {

@@ -31,13 +31,19 @@ body{
     margin: auto;
     padding: 20px;
     border-radius: 5px;
-    max-width: 500px;
+    width: 500px;
     position: relative;
+    height: 60%;
+    min-height: 300px
   }
-  
+  .pokemon{
+    height: 200px;
+    width:  300px;
+
+  }
+
   .modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
   }
-  
